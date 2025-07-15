@@ -37,5 +37,5 @@ A typical daily log includes:
 - **Findings**  
 - **Notes / Next Steps**  
 
-Example:  
+
 
