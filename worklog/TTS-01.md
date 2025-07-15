@@ -35,7 +35,8 @@
 ## 📝 Notes
 
 - Even though **audio is generated from phoneme input**, it is **not natural or correct** due to the reasons above.  
-- Future work should consider the **input requirements** and **internal processing** of the models being used.  
+- Future work should consider the **input requirements** and **internal processing** of the models being used.
+- If we want to work with these two model, specifically glow-tts. We will need to train the model on phoneme as input dataset with respective audio files.
 
 ---
 
