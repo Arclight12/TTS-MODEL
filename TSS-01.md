@@ -1,40 +1,27 @@
-Date- 14-07-2025
+Date: 14-07-2025
 
+## Today's Work
 
+- Tested two pre-trained models (Tacotron and Glow-TTS) from the Coqui-TTS library in Google Colab.
+- Both models produced proper audio output when given text input.
+- When given phoneme input, the models failed to produce correct audio.
 
-Todays work:
+## Findings
 
+1. **Model Training Data**:  
+   All the model are trained in different datasets for each library. The Coqui-TTS models are trained with text input, not phonemes. As a result, they do not handle phoneme input well. When phonemes are provided, the output audio is flawed (e.g., words are spelled out separately).
 
+2. **Internal G2P Conversion**:  
+   These models perform internal grapheme-to-phoneme (G2P) conversion. Supplying phonemes directly interferes with this process, leading to incorrect or unnatural audio output.
 
-I tried to run two pre trained model from coqui-TTS library/Framework in google colab. when the input was given as text, both the model were able to output proper audio.However, when i gave phoneme as an input, it wasnt able to give proper output/audio.
+3. **Phoneme Formats**:  
+   - There are two main phoneme formats: IPA (International Phonetic Alphabet) and ARPAbet.
+   - Coqui-TTS models only accept phonemes in ARPAbet format.
 
+## Notes
 
-
-The reason being so:-
-
-
-
-1\. All the model are trained in different datasets for each library. So, for coqui-TTS library the tacotron and glow-TTS model as been trained with text as an input not phoneme. That's why when we give input as a text, it isnt able to properly recognise it and produce proper output.
-
-
-
-We are getting an output/audio. However, there are major flaws in the audio so produced.
-
-for example, when we gave input= how are you(in phoneme format).
-
-the output audio so produced spells each word seperatly.
-
-
-
-2\. The models are such that they internally undergo text to phoneme conversion. The grapheme to phoneme conversion(G2P). Therefore, when we give phoneme as an input it collides with the G2P and the natural process. This causes the whole conversion process to become more complex. Therefore the output so produced is not correct.
-
-
-
-Few other things to note are:-
-
-
-
-The phoneme format are of two type, they are IPA(International phonetic Association) and ARPAbet.The models from coqui-TTS only take the phoneme in ARPABET format.
+- Even though audio is generated from phoneme input, it is not natural or correct due to the reasons above.
+- Future work should consider the input requirements and internal processing of the models being used.
 
 
 
