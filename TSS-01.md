@@ -38,3 +38,26 @@
 - Future work should consider the **input requirements** and **internal processing** of the models being used.  
 
 ---
+
+## ▶️ Example Script to Run Tacotron Model
+
+```python
+from TTS.api import TTS
+from IPython.display import Audio
+
+# Initialize TTS with the desired model
+# Use the correct model name from the list of available models
+tts = TTS("tts_models/en/ljspeech/tacotron2-DDC")
+
+# Define the text you want to convert to speech
+input_text = "Hello, this is a test of the Tacotron model."
+
+# Synthesize the speech
+# The output file will be saved as 'output.wav' in the current directory
+tts.tts_to_file(text=input_text, file_path="output.wav")
+
+# Play the audio
+audio = Audio("output.wav")
+display(audio)
+
+
