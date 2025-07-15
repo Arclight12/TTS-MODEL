@@ -1,27 +1,40 @@
-Date: 14-07-2025
+# Date: 14-07-2025
 
-## Today's Work
+## ✅ Today's Work
 
-- Tested two pre-trained models (Tacotron and Glow-TTS) from the Coqui-TTS library in Google Colab.
-- Both models produced proper audio output when given text input.
-- When given phoneme input, the models failed to produce correct audio.
+- Tested two pre-trained models (**Tacotron** and **Glow-TTS**) from the **Coqui-TTS** library in Google Colab.  
+- Both models produced **proper audio output** when given **text input**.  
+- When given **phoneme input**, the models **failed to produce correct audio**.
 
-## Findings
+---
 
-1. **Model Training Data**:  
-   All the model are trained in different datasets for each library. The Coqui-TTS models are trained with text input, not phonemes. As a result, they do not handle phoneme input well. When phonemes are provided, the output audio is flawed (e.g., words are spelled out separately).
+## 📌 Findings
 
-2. **Internal G2P Conversion**:  
-   These models perform internal grapheme-to-phoneme (G2P) conversion. Supplying phonemes directly interferes with this process, leading to incorrect or unnatural audio output.
+### 1. Model Training Data  
+- All the models are trained on **different datasets** for each library.  
+- **Coqui-TTS models** are trained with **text input**, **not phonemes**.  
+- As a result, they **do not handle phoneme input well**.  
+- When phonemes are provided, the **output audio is flawed** (e.g., words are spelled out separately).
 
-3. **Phoneme Formats**:  
-   - There are two main phoneme formats: IPA (International Phonetic Alphabet) and ARPAbet.
-   - Coqui-TTS models only accept phonemes in ARPAbet format.
+---
 
-## Notes
+### 2. Internal G2P Conversion  
+- These models perform **internal Grapheme-to-Phoneme (G2P)** conversion.  
+- Supplying phonemes directly **interferes with this process**, leading to **incorrect or unnatural audio output**.
 
-- Even though audio is generated from phoneme input, it is not natural or correct due to the reasons above.
-- Future work should consider the input requirements and internal processing of the models being used.
+---
 
+### 3. Phoneme Formats  
+- There are two main phoneme formats:  
+  - **IPA** (International Phonetic Alphabet)  
+  - **ARPAbet**  
+- **Coqui-TTS models only accept ARPAbet** phonemes.
 
+---
 
+## 📝 Notes
+
+- Even though **audio is generated from phoneme input**, it is **not natural or correct** due to the reasons above.  
+- Future work should consider the **input requirements** and **internal processing** of the models being used.  
+
+---
