@@ -1,0 +1,18 @@
+# TTS Project Worklog
+
+This repository documents the daily progress and findings of our Text-to-Speech (TTS) project. Each day, a new markdown file is added to record experiments, results, and insights.
+
+## Purpose
+
+- Track daily work and research on the TTS project.
+- Record challenges, solutions, and technical notes.
+- Provide a reference for future development and collaboration.
+
+## Structure
+
+- **README**: Overview and purpose of the repository.
+- **TSS-*.md**: Daily worklog files, each containing detailed notes for a specific day.
+
+## Usage
+
+Browse the `TSS-*.md` files to follow the project's progress and review daily
