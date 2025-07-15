@@ -16,14 +16,17 @@ Each day, a new Markdown file is added to record **experiments, results, and ins
 ## 📂 Repository Structure  
 
 - **`README.md`** → Overview and purpose of the repository.  
-- **`TTS-*.md`** → Daily worklog files (e.g., `TTS-14-07-2025.md`) containing detailed notes for each day.  
+- **`worklog/`** → Folder containing all daily logs.  
+  - **`worklog/TTS-01.md`** → Worklog for Day 1  
+  - **`worklog/TTS-02.md`** → Worklog for Day 2  
+  - … and so on  
 
 ---
 
 ## 🚀 Usage  
 
-- Browse the **`TTS-*.md`** files to follow the **project’s progress**.  
-- Review **daily experiments, findings, and technical details**.  
+- Browse the **`worklog/`** folder to follow the **project’s progress**.  
+- Each file (`TTS-XX.md`) contains **daily experiments, findings, and technical details**.  
 - Use it as a **reference** for ongoing and future TTS development.  
 
 ---
@@ -36,6 +39,5 @@ A typical daily log includes:
 - **Today’s Work**  
 - **Findings**  
 - **Notes / Next Steps**  
-
 
 
