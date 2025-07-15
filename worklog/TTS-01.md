@@ -59,5 +59,27 @@ tts.tts_to_file(text=input_text, file_path="output.wav")
 # Play the audio
 audio = Audio("output.wav")
 display(audio)
+```
+
+## ▶️ Example Script to Run Glow-TTS Model
+
+```python
+from TTS.api import TTS
+from IPython.display import Audio
+
+# Initialize TTS with the Glow-TTS model
+tts = TTS("tts_models/en/ljspeech/glow-tts")
+
+# Define the text you want to convert to speech
+input_text = "Hello, this is a test of the Glow-TTS model."
+
+# Synthesize the speech
+# The output file will be saved as 'glow_output.wav' in the current directory
+tts.tts_to_file(text=input_text, file_path="glow_output.wav")
+
+# Play the audio
+audio = Audio("glow_output.wav")
+display(audio)
+```
 
 
